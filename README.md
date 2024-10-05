@@ -7,4 +7,5 @@ This file contains different ways to accept input and read from a scanner.
 ## basics.java
 This is a file with information about basic structures such as variubles if else logic and a for loop
 
-
+## letters.java
+Some experimentation with char shifts 
