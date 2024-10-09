@@ -21,6 +21,7 @@ public class Input {
 		}
 		System.out.println(get_string_from_user(input, "Enter a string:")); 
 		System.out.println(get_number_from_user(input));
+		input.close()
 	}
 	public static String get_string_from_user(Scanner scan, String prompt) {
 		String value =""; 
