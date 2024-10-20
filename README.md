@@ -9,3 +9,9 @@ This is a file with information about basic structures such as variubles if else
 
 ## letters.java
 Some experimentation with char shifts 
+
+## random.java
+simple function and demonstration of how to generate a random number
+
+## arrays.java
+Functions to generate and print arrays

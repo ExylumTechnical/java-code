@@ -1,7 +1,7 @@
 package random;
 //get the libraries explicitly to reduce the chance of inherited vulnerabilities
 import java.util.Random;
-import java.util.Scanner;
+
 public class random {
 
 	public static void main(String[] args) {
