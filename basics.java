@@ -1,9 +1,15 @@
-package demo;
+package basics;
 
-public class Demo {
+public class basics{
 
+	public static int [] numbers;
+	// this is a public variuable that can be accessed by any function within the package
+	// and changes are stored publically
+	private static int [] privNumbers;
+	// the above is only accessable within the class.
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int [] numbers; // this is a private array that will take precidence over the public one.
 		int x = -12;
 		int y = x/2;
 		char a = 'a';

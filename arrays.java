@@ -1,8 +1,8 @@
-package dataTypes;
+package arrays;
 
 import java.util.Random;
 
-public class dataTypes {
+public class arrays {
 	public static void main(String[] args) {		
 		// create an array and give it a bunch of random values
 		int[] rand=createRandomIntArray(200,1,100);

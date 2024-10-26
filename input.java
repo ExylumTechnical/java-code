@@ -1,8 +1,8 @@
-package demo;
+package input;
 
 import java.util.Scanner;
 
-public class Input {
+public class input {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class Input {
 				System.out.println("Please contact the developer with details on how this error occured. \n Returning 73 for now");
 				flag=true;
 				value=73;
-			}
+			} 
 		}
 		return value;
 	}
