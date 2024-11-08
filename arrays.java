@@ -7,7 +7,7 @@ public class arrays {
 		// create an array and give it a bunch of random values
 		int[] rand=createRandomIntArray(200,1,100);
 		// print the random values in the array.
-		printArray(rand);
+		print1DArray(rand);
 	}
 	public static int[] createRandomIntArray(int length,int min, int max) {
 		/*
@@ -39,7 +39,7 @@ public class arrays {
 		return result;
 	}
 
-	public static int[] printArray(int[] arr) {
+	public static void print1DArray(int[] arr) {
 		/*
 		* Simple function to print an array supplied to the function
 		* prints 20 elements per row
@@ -51,9 +51,39 @@ public class arrays {
 				System.out.println();
 			}
 		}
-		
-		return arr;
 	}
+	public static void print2DCharArray(char[][] arr, int row, int column) {
+	/*
+	* Simple function to print an array supplied to the function
+	* prints 20 elements per row
+	*/	
+	for(int k=0; k<row; k++) {
+		//System.out.println("printing line "+k+":");
+		for(int i=0, j=1; i<column; i++, j++) {
+			System.out.printf("%c \t",arr[k][i]);
+			if(j%20==0) {
+				System.out.println();
+			}
+		}
+		System.out.println();
+	}
+}
+	public static void print2DintArray(int[][] arr, int row, int column) {
+	/*
+	* Simple function to print an array supplied to the function
+	* prints 20 elements per row
+	*/	
+	for(int k=0; k<row; k++) {
+		//System.out.println("printing line "+k+":");
+		for(int i=0, j=1; i<column; i++, j++) {
+			System.out.printf("%d \t",arr[k][i]);
+			if(j%20==0) {
+				System.out.println();
+			}
+		}
+		System.out.println();
+	}
+}
 	
 	public static int generate_random(int min, int max) {
 		/*
