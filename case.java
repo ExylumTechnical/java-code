@@ -1,24 +1,38 @@
-package caseSwitch;
+package switchCase;
 
-public class caseSwitch {
+import java.util.Scanner;
+
+public class SwitchCase {
 	public static void main(String[] args) {
 		Scanner userIn = new Scanner(System.in);
-		optionSwitch(getStringFromUser(userIn, "Enter option A or option B"));
+		char option = getCharFromUser(userIn, "Enter A or B");
+		System.out.println(option);
+		String result=optionSwitch(option);
+		System.out.println(result);
+		
 	}
-	public static char optionSwitch(char choice){
+	public static String optionSwitch(char choice){
+		String output = "Unknown option";
 		switch(choice){
-			case A:
-				return "Option A chosen";
-			case B:
-				return "Option B chosen";
+			case 'A':
+				output="Option A chosen";
+				break;
+			case 66:
+				output="Option B chosen";
+				break;
+			default:
+				output = "Unknown option enter either A or B";
+				break;
 		}
+		return output;
 	}
-	public static String getStringFromUser(Scanner input, String prompt) {
-		/* Function that will get a number from the user
+	public static char getCharFromUser(Scanner input, String prompt) {
+		/* Function that will get a char from the user
 		 * A scanner must be created in the main function prior to using it here
 		 * The prompt is a string that will be printed as a prompt
 		 */
 		String value =""; 
+		char returnValue;
 		int not_sane_flag=50;
 		boolean flag=false;
 		while(flag==false) {
@@ -28,7 +42,7 @@ public class caseSwitch {
 				value = input.next();
 				flag=true;
 			} catch (Exception e) {
-				System.out.println("Error: Please use a string here");
+				System.out.println("Error: Please enter a string");
 				not_sane_flag--;
 				System.out.println(e);
 			} finally{
@@ -40,6 +54,7 @@ public class caseSwitch {
 				value="";
 			}
 		}
-		return value;
+		returnValue=value.charAt(0);
+		return returnValue;
 	}
 }
