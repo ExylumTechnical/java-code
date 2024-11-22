@@ -23,6 +23,24 @@ public class arrays {
 		
 		return arr;
 	}
+	public int[][] returnBlankArray(int row, int column){
+		int arr[][]= {};
+		for(int k=0; k<row; k++) {
+			for(int i=0; i<column; i++) {
+				arr[k][i]=0;
+			}
+		}
+		
+		return arr;
+	}
+	public int[] returnBlankArray(int row){
+		int arr[]= {};
+		for(int k=0; k<row; k++) {
+			arr[k]=0;
+		}
+		
+		return arr;
+	}
 	public static boolean compareArrays(int[] arr1, int[] arr2) {
 		boolean result=true;
 		if(arr1.length!=arr2.length) {
