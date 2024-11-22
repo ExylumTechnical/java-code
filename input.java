@@ -85,6 +85,74 @@ public class input {
 		}
 		return value;
 	}
+	
+		public static int getIntFromUser(Scanner input, int min, int max) {
+		/* Get input from the user without a prompt
+		 * A scanner must be created in the main function prior to using it here
+		 * The prompt is a string that will be printed as a prompt
+		 */
+		int value = 0; 
+		int not_sane_flag=50;
+		boolean flag=false;
+		while(flag==false) {
+			value=0;
+			try {
+				value = input.nextInt();
+				flag=true;
+			} catch (java.util.InputMismatchException e) {
+				System.out.println("Error: Please enter a valid intiger (no decimals and must be a number between -2147483648 to 2147483647)");
+				not_sane_flag--;
+			} catch (Exception e) {
+				System.out.println("Error: A wild error was encountred");
+				System.out.println(e);				
+				not_sane_flag--;
+			} finally{
+				input.nextLine();
+			}
+			if(not_sane_flag<=0) {
+				System.out.println("Please contact the developer with details on how this error occured. \n Returning 73 for now");
+				flag=true;
+				value=73;
+			}
+			if(value > max || value < min){
+				System.out.println("The value entered is either below " + min + " or above "+max+". Please enter a number within that range");
+			}
+		}
+		return value;
+	}
+	
+		public static int getIntFromUser(Scanner input) {
+		/* Get input from the user without a prompt
+		 * A scanner must be created in the main function prior to using it here
+		 * The prompt is a string that will be printed as a prompt
+		 */
+		int value = 0; 
+		int not_sane_flag=50;
+		boolean flag=false;
+		while(flag==false) {
+			value=0;
+			try {
+				value = input.nextInt();
+				flag=true;
+			} catch (java.util.InputMismatchException e) {
+				System.out.println("Error: Please enter a valid intiger (no decimals and must be a number between -2147483648 to 2147483647)");
+				not_sane_flag--;
+			} catch (Exception e) {
+				System.out.println("Error: A wild error was encountred");
+				System.out.println(e);				
+				not_sane_flag--;
+			} finally{
+				input.nextLine();
+			}
+			if(not_sane_flag<=0) {
+				System.out.println("Please contact the developer with details on how this error occured. \n Returning 73 for now");
+				flag=true;
+				value=73;
+			} 
+		}
+		return value;
+	}
+	
 	public static char getCharFromUser(Scanner input, String prompt) {
 		/* Function that will get a char from the user
 		 * A scanner must be created in the main function prior to using it here
