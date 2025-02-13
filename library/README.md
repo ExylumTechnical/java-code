@@ -1,5 +1,5 @@
 # Custom Libraries
-A single location for all the custom functions that are not built in or that were created.
+A single location for all my custom functions that are not built in or that were created.
 
 ## generateRandomInt(int min, int max)
 Returns a random integer between the minimum and maximum values
