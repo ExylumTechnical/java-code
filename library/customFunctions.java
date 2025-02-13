@@ -10,10 +10,31 @@ public abstract class customFunctions{
 		return (Math.abs(rand.nextInt()) % (max - min + 1)) + min;
 	}
 	
-	public static double generateRandomDouble(){
-    // returns a non-whole number
+	public static double generateRandomDouble(double min, double max){
+		// returns a decimal number between the min and max values
 	    Random rand = new Random();
-	    return rand.nextDouble();
+	    return (Math.abs(rand.nextDouble()) % (max - min + 1)) + min;;
+	}
+	
+	public static int coinFlip(){
+		// returns a true or false value based on a coin flip
+		Random rand = new Random();
+		result=(Math.abs(rand.nextInt()) % 2;
+		if(result==1){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public static double generatePercent(){
+		// returns an integer less than one and greater than 0 to represent a percentage
+	    Random rand = new Random();
+	    Double perc = rand.nextDouble();
+		while(perc>=1){
+			perc = perc/10;
+		}
+		return perc;
 	}
  
 	public static boolean getUserInputCompareString(String message,Scanner scan,String compared){
