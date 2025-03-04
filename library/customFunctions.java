@@ -59,7 +59,35 @@ public abstract class customFunctions{
 		}
 		return perc;
 	}
-  
+  	public static String optionSelect(Scanner scan, String message, String [] stringArray) {
+		String entered="None";
+		while(entered.equals("None")) {
+			System.out.println(message);
+			String userInput = scan.nextLine();
+			// keep iterating throught the possibel 
+			for(int i=0; i < stringArray.length; i++) {
+				if(userInput.equals(stringArray[i])) {
+					entered=userInput ;
+				}
+			}
+			if(entered.equals("None")) {
+				System.out.println("Please enter a valid option");
+			}
+		}
+		// if none is returned then the supplied option was not valid
+		return entered;
+	}
+
+	public static String compareStrings(String compare, String [] stringArray) {
+		String entered="None";
+		for(int i=0; i < stringArray.length; i++) {
+			if(compare.equals(stringArray[i]) {
+				entered=compare;
+			}
+		}
+		// if none is returned then the supplied option was not valid
+		return entered;
+	}
 	public static int getUserInputInt(String message,Scanner scan, int min, int max){
     // Prints the string provided, gets input from the keyboard, and checks to see if the number
     // is within the minimum and maximum range.
